@@ -1,0 +1,21 @@
+version: '3'
+services:
+  first-subscriber:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: first-subscriber
+    depends_on:
+      - first-subscriber-db
+    ports:
+      - '3001:3001'
+    container_name: first-subscriber
+  first-subscriber-db:
+    image: mongo:latest
+    ports:
+      - '9020:27017'
+    container_name: first-subscriber-db
+networks:
+  default:
+    external:
+      name: data-enrichment

@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "first-subscriber-db": {
+    "host": "first-subscriber-db",
+    "port": 27017,
+    "url": "mongodb://first-subscriber-db:27017/first-subscriber",
+    "database": "first-subscriber",
+    "password": "",
+    "name": "first-subscriber-db",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
